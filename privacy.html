@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Globiz</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand:       #1a56db;
+      --brand-dark:  #1040b0;
+      --bg:          #f8f9fc;
+      --surface:     #ffffff;
+      --border:      #e2e6ef;
+      --text:        #1a1a2e;
+      --muted:       #374151;
+      --subtle:      #64748b;
+      --tag-bg:      #eff6ff;
+      --tag-color:   #1e3a8a;
+      --warn-bg:     #fffbeb;
+      --warn-border: #f59e0b;
+      --warn-text:   #78350f;
+      --info-bg:     #eff6ff;
+      --info-border: #1a56db;
+      --info-text:   #1e3a8a;
+      --ok-bg:       #f0fdf4;
+      --ok-border:   #16a34a;
+      --ok-text:     #14532d;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    /* ── Layout ─────────────────────────────────────────────────── */
+    .layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      max-width: 1100px;
+      margin: 0 auto;
+      gap: 0;
+      min-height: 100vh;
+    }
+
+    /* ── Sidebar ─────────────────────────────────────────────────── */
+    .sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      background: #0d1117;
+      padding: 32px 20px;
+      border-right: 1px solid #1e2633;
+    }
+
+    .sidebar-logo {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--brand);
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+
+    .sidebar-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #4b5563;
+      margin-bottom: 28px;
+    }
+
+    .sidebar nav { margin-bottom: 32px; }
+
+    .nav-group-title {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #374151;
+      margin: 20px 0 6px;
+      padding-left: 10px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: #9ca3af;
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+      line-height: 1.4;
+    }
+
+    .sidebar a:hover {
+      background: #1e2633;
+      color: #f1f5f9;
+    }
+
+    .sidebar-meta {
+      font-size: 11px;
+      color: #374151;
+      padding-top: 20px;
+      border-top: 1px solid #1e2633;
+      line-height: 1.6;
+    }
+
+    /* ── Main ────────────────────────────────────────────────────── */
+    main {
+      background: var(--surface);
+      padding: 60px 72px;
+      min-width: 0;
+    }
+
+    /* ── Header ──────────────────────────────────────────────────── */
+    .doc-header {
+      border-bottom: 3px solid var(--brand);
+      padding-bottom: 28px;
+      margin-bottom: 48px;
+    }
+
+    .doc-header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #0d1117;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+
+    .doc-header .tagline {
+      font-size: 15px;
+      color: var(--subtle);
+      margin-bottom: 16px;
+    }
+
+    .badge-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 600;
+      background: var(--tag-bg);
+      color: var(--tag-color);
+      border: 1px solid #bfdbfe;
+    }
+
+    /* ── Summary table ───────────────────────────────────────────── */
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 48px;
+      font-size: 14px;
+    }
+
+    .summary-table caption {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--subtle);
+      text-align: left;
+      padding-bottom: 10px;
+    }
+
+    .summary-table th {
+      background: var(--brand);
+      color: #fff;
+      padding: 10px 16px;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 600;
+      width: 30%;
+    }
+
+    .summary-table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      vertical-align: top;
+    }
+
+    .summary-table tr:nth-child(even) td { background: #f8f9fc; }
+
+    /* ── Sections ────────────────────────────────────────────────── */
+    section {
+      margin-bottom: 52px;
+      scroll-margin-top: 24px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0d1117;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    h2 .section-num {
+      display: inline-block;
+      background: var(--brand);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 4px;
+      padding: 2px 7px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 24px 0 8px;
+    }
+
+    h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+      margin: 16px 0 6px;
+    }
+
+    p { margin-bottom: 14px; color: var(--muted); }
+
+    ul, ol { padding-left: 22px; margin-bottom: 14px; }
+
+    li { margin-bottom: 6px; color: var(--muted); }
+
+    strong { color: var(--text); }
+
+    /* ── Callouts ─────────────────────────────────────────────────── */
+    .callout {
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .callout-info    { background: var(--info-bg);  border-left: 4px solid var(--info-border);  color: var(--info-text); }
+    .callout-warning { background: var(--warn-bg);  border-left: 4px solid var(--warn-border);  color: var(--warn-text); }
+    .callout-ok      { background: var(--ok-bg);    border-left: 4px solid var(--ok-border);    color: var(--ok-text); }
+
+    /* ── Data table ──────────────────────────────────────────────── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      margin: 16px 0 24px;
+    }
+
+    .data-table thead { background: #0d1117; color: #f1f5f9; }
+
+    .data-table th {
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .data-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      vertical-align: top;
+    }
+
+    .data-table tr:nth-child(even) td { background: #f8f9fc; }
+
+    /* ── Rights grid ─────────────────────────────────────────────── */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 20px 0;
+    }
+
+    .right-card {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 16px;
+    }
+
+    .right-card .icon {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .right-card h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0 0 6px;
+    }
+
+    .right-card p {
+      font-size: 12.5px;
+      color: var(--subtle);
+      margin: 0;
+    }
+
+    /* ── Footer ──────────────────────────────────────────────────── */
+    .doc-footer {
+      margin-top: 64px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--subtle);
+      text-align: center;
+    }
+
+    .doc-footer p + p { margin-top: 6px; }
+
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Responsive ──────────────────────────────────────────────── */
+    @media (max-width: 800px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; height: auto; }
+      main { padding: 32px 24px; }
+    }
+
+    @media print {
+      .sidebar { display: none; }
+      .layout { display: block; }
+      main { padding: 0; }
+    }
+  </style>
+</head>
+<body>
+<div class="layout">
+
+  <!-- ── Sidebar ─────────────────────────────────────────────── -->
+  <aside class="sidebar" aria-label="Document navigation">
+    <div class="sidebar-logo">Globiz</div>
+    <div class="sidebar-label">Privacy Policy</div>
+
+    <nav>
+      <div class="nav-group-title">Introduction</div>
+      <a href="#overview">Policy Overview</a>
+      <a href="#scope">Scope &amp; Application</a>
+      <a href="#roles">Our Role as Controller / Processor</a>
+
+      <div class="nav-group-title">Data We Collect</div>
+      <a href="#collect-account">Account &amp; Profile Data</a>
+      <a href="#collect-crm">CRM &amp; Contact Data</a>
+      <a href="#collect-usage">Usage &amp; Log Data</a>
+      <a href="#collect-device">Device &amp; Local Storage</a>
+      <a href="#collect-comms">Communications Data</a>
+      <a href="#collect-payment">Payment Data</a>
+      <a href="#collect-ai">AI Interaction Data</a>
+
+      <div class="nav-group-title">How We Use Data</div>
+      <a href="#use">Purposes of Processing</a>
+      <a href="#legal-basis">Legal Bases (PDPA)</a>
+
+      <div class="nav-group-title">Sharing &amp; Transfers</div>
+      <a href="#sharing">Who We Share Data With</a>
+      <a href="#third-party-integrations">Third-Party Integrations</a>
+      <a href="#international">International Transfers</a>
+
+      <div class="nav-group-title">Retention &amp; Security</div>
+      <a href="#retention">Data Retention</a>
+      <a href="#security">Security Measures</a>
+
+      <div class="nav-group-title">Your Rights</div>
+      <a href="#rights">Your Rights Under PDPA</a>
+      <a href="#marketing-opt-out">Marketing Opt-Out</a>
+      <a href="#children">Children's Privacy</a>
+
+      <div class="nav-group-title">Other</div>
+      <a href="#cookies">Cookies &amp; Tracking</a>
+      <a href="#changes">Policy Updates</a>
+      <a href="#contact">Contact &amp; DPO</a>
+    </nav>
+
+    <div class="sidebar-meta">
+      <strong style="color:#9ca3af;">Effective Date</strong><br>June 11, 2026<br>
+      <strong style="color:#9ca3af; margin-top:6px; display:block;">Version</strong> 1.0<br>
+      <strong style="color:#9ca3af; margin-top:6px; display:block;">Governing Law</strong> Republic of Singapore (PDPA 2012)
+    </div>
+  </aside>
+
+  <!-- ── Main ────────────────────────────────────────────────── -->
+  <main>
+
+    <!-- Header -->
+    <header class="doc-header">
+      <h1>Privacy Policy</h1>
+      <p class="tagline">
+        AlphaTok Singapore Pte. Ltd. ("we", "us", "our") operates Globiz, an agentic CRM and marketing growth workspace. This Policy explains how we collect, use, store, share, and protect your personal data.
+      </p>
+      <div class="badge-row">
+        <span class="badge">PDPA 2012</span>
+        <span class="badge">CAN-SPAM Aware</span>
+        <span class="badge">GDPR-Aligned</span>
+        <span class="badge">Singapore Law</span>
+        <span class="badge">B2B + Consumer</span>
+      </div>
+    </header>
+
+    <!-- At a Glance -->
+    <table class="summary-table" aria-label="Privacy at a glance">
+      <caption>Privacy at a Glance — Full details follow in each section below</caption>
+      <tbody>
+        <tr>
+          <th>What we collect</th>
+          <td>Account details, CRM/contact data you import, usage logs, payment metadata, AI interaction logs, and device identifiers.</td>
+        </tr>
+        <tr>
+          <th>Why we collect it</th>
+          <td>To provide and improve the Service, process payments, send you product updates, comply with law, and protect against fraud and abuse.</td>
+        </tr>
+        <tr>
+          <th>Who we share with</th>
+          <td>Cloud infrastructure providers, payment processors, AI model providers (Anthropic, OpenAI, Google), and social platform APIs — only to the extent needed to deliver the Service.</td>
+        </tr>
+        <tr>
+          <th>Your data, your control</th>
+          <td>You can access, correct, export, or delete your data at any time. CRM contact data belongs to you. We do not sell personal data.</td>
+        </tr>
+        <tr>
+          <th>Retention</th>
+          <td>Account data is held while your account is active plus 30 days post-termination. Legal obligations may require longer retention of financial records (up to 7 years).</td>
+        </tr>
+        <tr>
+          <th>Legal basis</th>
+          <td>Consent, contractual necessity, legitimate interests, and legal obligation — detailed in Section 8.</td>
+        </tr>
+        <tr>
+          <th>Contact</th>
+          <td><a href="mailto:sgalphatok@gmail.com">sgalphatok@gmail.com</a> — subject line "Privacy Request"</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ── 1. Overview ─────────────────────────────────────────── -->
+    <section id="overview">
+      <h2><span class="section-num">1</span>Policy Overview</h2>
+      <p>
+        Globiz is an Electron-based desktop application that helps B2B teams discover target customers, plan and execute outreach campaigns, capture engagement signals, and progress deals through AI-assisted workflows. In delivering these capabilities, we necessarily handle personal data — both yours as a user and data about the business contacts you manage within the platform.
+      </p>
+      <p>
+        This Privacy Policy applies to all data processing activities carried out by AlphaTok Singapore Pte. Ltd. in connection with the Globiz desktop application, our website, and any APIs or integrations we offer. It is written to comply with the Singapore <strong>Personal Data Protection Act 2012 (PDPA)</strong> and, where applicable, to align with the principles of the EU/UK General Data Protection Regulation (GDPR) and the United States CAN-SPAM Act.
+      </p>
+      <div class="callout callout-ok">
+        <strong>We do not sell your personal data.</strong> We do not sell, rent, or trade personal data to data brokers, advertisers, or other third parties for their own marketing use.
+      </div>
+    </section>
+
+    <!-- ── 2. Scope ─────────────────────────────────────────────── -->
+    <section id="scope">
+      <h2><span class="section-num">2</span>Scope &amp; Application</h2>
+      <p>This Policy applies to:</p>
+      <ul>
+        <li><strong>Registered users</strong> of the Globiz desktop application, whether on a free trial, paid subscription, or enterprise plan;</li>
+        <li><strong>Business contacts</strong> whose personal data is imported or generated within the platform by Globiz users;</li>
+        <li><strong>Visitors</strong> to our website and marketing pages; and</li>
+        <li><strong>Prospective customers</strong> who contact us about our products.</li>
+      </ul>
+      <p>
+        This Policy does <strong>not</strong> apply to the privacy practices of third-party platforms integrated with Globiz (e.g., LinkedIn, Twitter/X, WhatsApp). Those platforms have their own privacy policies, which you should review independently.
+      </p>
+      <div class="callout callout-info">
+        <strong>Note for EU/UK users:</strong> Where you access Globiz from within the European Economic Area or United Kingdom, we apply GDPR-equivalent protections in addition to our PDPA obligations. The relevant lawful bases and your enhanced rights are detailed in Section 8 and Section 13.
+      </div>
+    </section>
+
+    <!-- ── 3. Roles ─────────────────────────────────────────────── -->
+    <section id="roles">
+      <h2><span class="section-num">3</span>Our Role as Data Controller and Data Processor</h2>
+
+      <h3>When we are the Data Controller</h3>
+      <p>
+        We act as the <strong>data controller</strong> for personal data we collect directly from you — such as your account registration details, billing information, usage analytics, and customer support communications. We determine the purposes and means of processing this data.
+      </p>
+
+      <h3>When we are the Data Processor</h3>
+      <p>
+        We act as a <strong>data processor</strong> for the personal data of third-party contacts (leads, customers, prospects) that you import or create within Globiz's CRM. In this capacity, we process that data solely on your instructions and in accordance with our Data Processing Agreement. You, the Globiz user, are the data controller for those contacts and are responsible for ensuring you have a lawful basis to process and store their personal data.
+      </p>
+
+      <div class="callout callout-warning">
+        <strong>Your responsibility:</strong> Before importing third-party contact data into Globiz (e.g., from a spreadsheet, LinkedIn export, or third-party tool), you must ensure you have a valid lawful basis to hold and process that data under applicable law, including the PDPA and any laws in your contacts' jurisdictions.
+      </div>
+    </section>
+
+    <!-- ── 4. What We Collect ───────────────────────────────────── -->
+    <section id="collect-account">
+      <h2><span class="section-num">4</span>Data We Collect — Account &amp; Profile</h2>
+      <p>When you register for and use Globiz, we collect the following categories of personal data directly from you:</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Examples</th>
+            <th>Source</th>
+            <th>Required?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Identity</strong></td>
+            <td>Name, username, profile photo</td>
+            <td>You (registration)</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><strong>Contact</strong></td>
+            <td>Email address</td>
+            <td>You (registration)</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><strong>Organisation</strong></td>
+            <td>Company name, job title, industry</td>
+            <td>You (optional onboarding)</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><strong>Credentials</strong></td>
+            <td>Hashed password, OAuth tokens for third-party integrations</td>
+            <td>You / Third-party OAuth</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td><strong>Preferences</strong></td>
+            <td>Notification settings, UI preferences, language</td>
+            <td>You (in-app settings)</td>
+            <td>No</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="collect-crm">
+      <h2><span class="section-num">5</span>Data We Collect — CRM &amp; Contact Data</h2>
+      <p>
+        As part of providing CRM functionality, Globiz processes data about the business contacts you manage. This data is controlled by you (the Globiz user), and we process it as your data processor.
+      </p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Examples</th>
+            <th>Who Provides It</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Contact identity</strong></td>
+            <td>Name, email, phone, LinkedIn URL, social handles</td>
+            <td>You (manual entry or import)</td>
+          </tr>
+          <tr>
+            <td><strong>Company data</strong></td>
+            <td>Company name, industry, size, website, location</td>
+            <td>You or AI enrichment</td>
+          </tr>
+          <tr>
+            <td><strong>Deal &amp; pipeline data</strong></td>
+            <td>Deal stage, deal value, close date, notes</td>
+            <td>You</td>
+          </tr>
+          <tr>
+            <td><strong>Engagement history</strong></td>
+            <td>Email opens, clicks, replies, social interactions</td>
+            <td>Third-party APIs, tracking pixels you enable</td>
+          </tr>
+          <tr>
+            <td><strong>Outreach content</strong></td>
+            <td>Emails sent, messages composed, campaign sequences</td>
+            <td>You (authored or AI-assisted)</td>
+          </tr>
+          <tr>
+            <td><strong>Enrichment data</strong></td>
+            <td>Publicly available professional data sourced via AI agents</td>
+            <td>AI agents acting on your instructions</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Your CRM data is stored in a local SQLite database at <code>~/.globizwork/globizwork.sqlite</code> on your device and, where cloud sync is enabled, in encrypted cloud storage infrastructure we operate.
+      </p>
+    </section>
+
+    <section id="collect-usage">
+      <h2><span class="section-num">6</span>Data We Collect — Usage &amp; Log Data</h2>
+      <p>We automatically collect certain technical data when you use the Service to help us improve reliability, debug issues, and understand how features are used.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Type</th><th>Details</th><th>Retention</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Application logs</strong></td>
+            <td>Feature interactions, workflow completions, error events (no CRM content)</td>
+            <td>90 days</td>
+          </tr>
+          <tr>
+            <td><strong>Crash reports</strong></td>
+            <td>Stack traces, OS version, app version, device type</td>
+            <td>30 days</td>
+          </tr>
+          <tr>
+            <td><strong>Performance telemetry</strong></td>
+            <td>Response times, sync durations, agent latency</td>
+            <td>90 days</td>
+          </tr>
+          <tr>
+            <td><strong>Feature usage</strong></td>
+            <td>Aggregate, anonymised counts of feature activations</td>
+            <td>24 months (anonymised)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Usage logs are aggregated and do not include the content of your CRM records or outreach messages. You may opt out of non-essential telemetry in Settings → Privacy.</p>
+    </section>
+
+    <section id="collect-device">
+      <h2><span class="section-num">7</span>Data We Collect — Device &amp; Local Storage</h2>
+      <p>
+        Globiz is a desktop application that stores data locally on your device. The following data resides in <code>~/.globizwork/</code>:
+      </p>
+      <ul>
+        <li><strong>Main database</strong> (<code>globizwork.sqlite</code>) — CRM records, campaigns, pipeline data;</li>
+        <li><strong>Thread checkpoints</strong> (<code>threads/</code>) — AI agent state and conversation history for resumability;</li>
+        <li><strong>API credentials</strong> (<code>.env</code>) — your third-party API keys (Anthropic, OpenAI, Google, etc.); and</li>
+        <li><strong>OAuth state</strong> (<code>linkedin-state.json</code>, similar files) — authentication tokens for connected social platforms.</li>
+      </ul>
+      <p>
+        You are responsible for the physical and logical security of your device and local storage. We recommend encrypting your device's hard drive and using strong system-level authentication.
+      </p>
+    </section>
+
+    <section id="collect-comms">
+      <h2><span class="section-num">8</span>Data We Collect — Communications Data</h2>
+      <p>When you communicate with us directly (e.g., by emailing support or submitting a bug report), we collect:</p>
+      <ul>
+        <li>Your name and email address;</li>
+        <li>The content of your message; and</li>
+        <li>Any attachments or screenshots you voluntarily share.</li>
+      </ul>
+      <p>We use this data solely to respond to your enquiry and improve the Service. Support communications are retained for up to 2 years.</p>
+    </section>
+
+    <section id="collect-payment">
+      <h2><span class="section-num">9</span>Data We Collect — Payment Data</h2>
+      <p>
+        Subscription payments are processed by a third-party payment processor (e.g., Stripe). We do <strong>not</strong> store your full card number, CVV, or bank account details. We retain:
+      </p>
+      <ul>
+        <li>Billing name and address;</li>
+        <li>Last four digits of card (for display only);</li>
+        <li>Transaction IDs and amounts; and</li>
+        <li>Subscription status and history.</li>
+      </ul>
+      <p>Payment data is retained for at least 7 years to meet Singapore accounting and tax record obligations.</p>
+    </section>
+
+    <section id="collect-ai">
+      <h2><span class="section-num">10</span>Data We Collect — AI Interaction Data</h2>
+      <p>
+        Globiz routes certain inputs to large language model (LLM) providers (Anthropic Claude, OpenAI GPT, Google Gemini) to power AI features. The following data may be transmitted to and processed by those providers:
+      </p>
+      <ul>
+        <li>Prompts and instructions you enter into the AI agent chat;</li>
+        <li>CRM context snippets used to ground AI responses (e.g., contact name, company, deal stage); and</li>
+        <li>Drafted outreach content submitted for AI editing or generation.</li>
+      </ul>
+
+      <div class="callout callout-warning">
+        <strong>Important:</strong> Do not submit sensitive personal data (e.g., health information, government ID numbers, financial account numbers) to the AI agent interface. LLM providers process inputs on their own infrastructure under their own privacy policies. See Section 12 for details.
+      </div>
+
+      <p>
+        AI interaction logs (prompts and responses) are stored locally as part of the thread checkpoint system at <code>~/.globizwork/threads/</code>. We retain server-side AI usage metadata (token counts, model used, latency) for billing and performance monitoring.
+      </p>
+
+      <h3>AI Model Provider Data Practices</h3>
+      <table class="data-table">
+        <thead>
+          <tr><th>Provider</th><th>Model</th><th>Data Retention Policy</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Anthropic</td>
+            <td>Claude</td>
+            <td>API inputs/outputs are not used to train models by default (see Anthropic's API Privacy Policy)</td>
+          </tr>
+          <tr>
+            <td>OpenAI</td>
+            <td>GPT-4 and later</td>
+            <td>API data not used for training by default; retained up to 30 days for safety monitoring</td>
+          </tr>
+          <tr>
+            <td>Google</td>
+            <td>Gemini</td>
+            <td>Subject to Google Cloud API data processing terms</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ── 11. How We Use Data ──────────────────────────────────── -->
+    <section id="use">
+      <h2><span class="section-num">11</span>How We Use Your Data</h2>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Purpose</th>
+            <th>Data Categories Used</th>
+            <th>Legal Basis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Provide and operate the Service</strong></td>
+            <td>Account, CRM, AI interaction, device</td>
+            <td>Contract</td>
+          </tr>
+          <tr>
+            <td><strong>Process payments and manage subscriptions</strong></td>
+            <td>Payment, account</td>
+            <td>Contract / Legal obligation</td>
+          </tr>
+          <tr>
+            <td><strong>Send transactional communications</strong> (receipts, security alerts, service updates)</td>
+            <td>Contact (email)</td>
+            <td>Contract</td>
+          </tr>
+          <tr>
+            <td><strong>Send product marketing emails</strong></td>
+            <td>Contact (email), usage</td>
+            <td>Legitimate interests / Consent</td>
+          </tr>
+          <tr>
+            <td><strong>Improve the Service</strong> (analytics, A/B testing, feature prioritisation)</td>
+            <td>Usage (aggregated/anonymised)</td>
+            <td>Legitimate interests</td>
+          </tr>
+          <tr>
+            <td><strong>Provide customer support</strong></td>
+            <td>Communications, account</td>
+            <td>Contract / Legitimate interests</td>
+          </tr>
+          <tr>
+            <td><strong>Detect fraud, abuse, and security incidents</strong></td>
+            <td>Account, usage, device</td>
+            <td>Legitimate interests / Legal obligation</td>
+          </tr>
+          <tr>
+            <td><strong>Comply with legal obligations</strong> (tax records, court orders, regulatory requests)</td>
+            <td>All relevant categories</td>
+            <td>Legal obligation</td>
+          </tr>
+          <tr>
+            <td><strong>Enforce our Terms and Conditions</strong></td>
+            <td>Account, usage</td>
+            <td>Legitimate interests / Contract</td>
+          </tr>
+          <tr>
+            <td><strong>Conduct research and development</strong></td>
+            <td>Aggregated, de-identified data only</td>
+            <td>Legitimate interests</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ── 12. Legal Basis ─────────────────────────────────────── -->
+    <section id="legal-basis">
+      <h2><span class="section-num">12</span>Legal Bases for Processing (PDPA)</h2>
+      <p>Under the Singapore PDPA, we rely on the following bases to collect, use, and disclose personal data:</p>
+
+      <h3>Consent</h3>
+      <p>Where you have given us explicit, voluntary consent — for example, when opting in to marketing communications or enabling optional telemetry features. You may withdraw consent at any time without affecting processing carried out before withdrawal.</p>
+
+      <h3>Contractual Necessity</h3>
+      <p>Processing necessary to perform the contract we have with you — delivering the Globiz Service, processing your subscription, and providing customer support.</p>
+
+      <h3>Legitimate Interests</h3>
+      <p>We process certain data for our legitimate business interests where those interests are not overridden by your rights and freedoms. This includes fraud prevention, security monitoring, product analytics (using anonymised data), and communicating service improvements. We conduct balancing tests to ensure this basis is appropriate.</p>
+
+      <h3>Legal Obligation</h3>
+      <p>Processing required to comply with applicable laws — including Singapore tax and accounting law, anti-money laundering regulations, and lawful requests from regulators or courts.</p>
+    </section>
+
+    <!-- ── 13. Sharing ─────────────────────────────────────────── -->
+    <section id="sharing">
+      <h2><span class="section-num">13</span>Who We Share Your Data With</h2>
+      <p>We share personal data only as described below. We do not sell personal data.</p>
+
+      <h3>Service Providers (Sub-processors)</h3>
+      <p>We engage trusted third-party companies to help us deliver the Service. These sub-processors are contractually bound to process data only on our instructions and to implement appropriate security measures.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Sub-processor Category</th><th>Purpose</th><th>Location</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cloud infrastructure</td>
+            <td>Database hosting, storage, and CDN</td>
+            <td>Singapore / Asia-Pacific</td>
+          </tr>
+          <tr>
+            <td>Payment processing</td>
+            <td>Subscription billing and payment handling</td>
+            <td>USA (Stripe)</td>
+          </tr>
+          <tr>
+            <td>AI model providers</td>
+            <td>Powering AI assistant features</td>
+            <td>USA (Anthropic, OpenAI, Google)</td>
+          </tr>
+          <tr>
+            <td>Email delivery</td>
+            <td>Transactional and marketing emails to you</td>
+            <td>USA / EU</td>
+          </tr>
+          <tr>
+            <td>Analytics (anonymised)</td>
+            <td>Product usage analytics (no personal data)</td>
+            <td>EU / USA</td>
+          </tr>
+          <tr>
+            <td>Error monitoring</td>
+            <td>Crash reporting and debugging</td>
+            <td>USA / EU</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Legal Disclosures</h3>
+      <p>We may disclose personal data to government authorities, regulators, or courts when required by Singapore law, valid legal process, or to protect the rights, property, or safety of AlphaTok Singapore Pte. Ltd., our users, or others. Where legally permissible, we will notify you before complying with such requests.</p>
+
+      <h3>Business Transfers</h3>
+      <p>In the event of a merger, acquisition, asset sale, or restructuring involving AlphaTok Singapore Pte. Ltd., personal data may be transferred to the acquiring entity. We will notify you of any such transfer and your options, and will require the acquirer to honour this Policy or provide you with equivalent protections.</p>
+
+      <h3>With Your Consent</h3>
+      <p>We may share data with third parties in other ways with your explicit consent.</p>
+    </section>
+
+    <!-- ── 14. Third-party integrations ───────────────────────── -->
+    <section id="third-party-integrations">
+      <h2><span class="section-num">14</span>Third-Party Integrations</h2>
+      <p>
+        Globiz integrates with the following categories of external platforms to deliver its features. When you connect a third-party account, you authorise us to exchange data with that platform on your behalf, as directed by you. Each platform's own privacy policy governs how they process data on their side.
+      </p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Platform Type</th><th>Examples</th><th>Data Exchanged</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Professional social</td>
+            <td>LinkedIn</td>
+            <td>Profile data, connection lists, messages (via OAuth)</td>
+          </tr>
+          <tr>
+            <td>Social media</td>
+            <td>Twitter/X, Facebook, Instagram</td>
+            <td>Post content, engagement metrics, direct messages</td>
+          </tr>
+          <tr>
+            <td>Messaging</td>
+            <td>WhatsApp, Telegram, Discord, Slack</td>
+            <td>Messages sent/received via connected accounts</td>
+          </tr>
+          <tr>
+            <td>AI model providers</td>
+            <td>Anthropic (Claude), OpenAI (GPT), Google (Gemini)</td>
+            <td>Prompts, context snippets (see Section 10)</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>Any IMAP/SMTP provider you connect</td>
+            <td>Email metadata and content for CRM sync</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>You can disconnect any third-party integration at any time in Settings → Integrations. Disconnecting revokes our access token but does not delete data already synced; use the data deletion tools in the application to remove synced records.</p>
+    </section>
+
+    <!-- ── 15. International ────────────────────────────────────── -->
+    <section id="international">
+      <h2><span class="section-num">15</span>International Data Transfers</h2>
+      <p>
+        Some sub-processors and AI model providers are located outside Singapore (primarily in the United States and European Union). When we transfer personal data internationally, we take steps to ensure adequate protection is in place, including:
+      </p>
+      <ul>
+        <li>Entering into contractual clauses that require recipients to protect personal data in accordance with the PDPA;</li>
+        <li>Ensuring AI providers operate under their own binding corporate rules or equivalent data protection commitments; and</li>
+        <li>Reviewing the data protection standards of recipient countries before transferring.</li>
+      </ul>
+      <p>
+        EU/UK users: where transfers occur to countries without an EU adequacy decision, we rely on Standard Contractual Clauses (SCCs) or equivalent mechanisms.
+      </p>
+    </section>
+
+    <!-- ── 16. Retention ───────────────────────────────────────── -->
+    <section id="retention">
+      <h2><span class="section-num">16</span>Data Retention</h2>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Data Category</th><th>Retention Period</th><th>Reason</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Account &amp; profile data</td>
+            <td>Duration of account + 30 days post-termination</td>
+            <td>Service provision; brief grace period for reactivation</td>
+          </tr>
+          <tr>
+            <td>CRM / contact data</td>
+            <td>Duration of account + 30 days post-termination</td>
+            <td>You control this; deletion on request at any time</td>
+          </tr>
+          <tr>
+            <td>Payment records</td>
+            <td>7 years from transaction date</td>
+            <td>Singapore Income Tax Act and accounting law</td>
+          </tr>
+          <tr>
+            <td>Application logs</td>
+            <td>90 days</td>
+            <td>Debugging and security monitoring</td>
+          </tr>
+          <tr>
+            <td>Support communications</td>
+            <td>2 years from last correspondence</td>
+            <td>Quality assurance and dispute resolution</td>
+          </tr>
+          <tr>
+            <td>Anonymised analytics</td>
+            <td>Up to 24 months</td>
+            <td>Product improvement (no personal identifiers)</td>
+          </tr>
+          <tr>
+            <td>Legal hold data</td>
+            <td>Duration of legal proceedings</td>
+            <td>Legal obligation</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        At the end of each retention period, data is securely deleted or irreversibly anonymised. You may request early deletion of your account and associated data at any time (subject to legal hold obligations) — see Section 18.
+      </p>
+    </section>
+
+    <!-- ── 17. Security ────────────────────────────────────────── -->
+    <section id="security">
+      <h2><span class="section-num">17</span>Security Measures</h2>
+      <p>We implement a multi-layered approach to data security:</p>
+
+      <h3>Technical Controls</h3>
+      <ul>
+        <li>Encryption in transit using TLS 1.2 or higher for all data exchanged with our servers;</li>
+        <li>Encryption at rest for databases held on our cloud infrastructure;</li>
+        <li>API keys and OAuth tokens stored locally are handled by Electron secure storage mechanisms;</li>
+        <li>Regular security patching and dependency vulnerability scanning; and</li>
+        <li>Access controls and authentication enforced across our infrastructure.</li>
+      </ul>
+
+      <h3>Organisational Controls</h3>
+      <ul>
+        <li>Access to production systems is limited to authorised personnel on a need-to-know basis;</li>
+        <li>Staff are trained on data protection and security practices; and</li>
+        <li>We conduct periodic security assessments of our systems and sub-processors.</li>
+      </ul>
+
+      <h3>Breach Notification</h3>
+      <p>
+        In the event of a data breach affecting your personal data, we will notify the Singapore Personal Data Protection Commission (PDPC) within 3 calendar days if the breach is notifiable under the PDPA. We will notify affected individuals without undue delay where the breach is likely to result in significant harm to them.
+      </p>
+
+      <div class="callout callout-warning">
+        <strong>Your device security matters too.</strong> Because Globiz stores data locally at <code>~/.globizwork/</code>, your device's physical and logical security is critical. We strongly recommend enabling full-disk encryption and using a strong system password. We cannot be responsible for breaches resulting from unauthorized access to your local device.
+      </div>
+    </section>
+
+    <!-- ── 18. Rights ──────────────────────────────────────────── -->
+    <section id="rights">
+      <h2><span class="section-num">18</span>Your Rights Under PDPA (and GDPR)</h2>
+      <p>
+        Under the Singapore PDPA, you have the following rights in relation to your personal data. EU/UK users hold equivalent rights under the GDPR, which may be broader in certain respects.
+      </p>
+
+      <div class="rights-grid">
+        <div class="right-card">
+          <div class="icon">🔍</div>
+          <h4>Access</h4>
+          <p>Request a copy of the personal data we hold about you and information on how it is used.</p>
+        </div>
+        <div class="right-card">
+          <div class="icon">✏️</div>
+          <h4>Correction</h4>
+          <p>Request correction of inaccurate or incomplete personal data we hold about you.</p>
+        </div>
+        <div class="right-card">
+          <div class="icon">🗑️</div>
+          <h4>Deletion</h4>
+          <p>Request deletion of your account and associated personal data (subject to legal retention obligations).</p>
+        </div>
+        <div class="right-card">
+          <div class="icon">📦</div>
+          <h4>Data Portability</h4>
+          <p>Export your CRM and account data in a structured, machine-readable format (CSV/JSON).</p>
+        </div>
+        <div class="right-card">
+          <div class="icon">🚫</div>
+          <h4>Withdraw Consent</h4>
+          <p>Withdraw consent for marketing communications or optional telemetry at any time.</p>
+        </div>
+        <div class="right-card">
+          <div class="icon">⚠️</div>
+          <h4>Object</h4>
+          <p>Object to processing based on legitimate interests where your rights override our interests (GDPR).</p>
+        </div>
+        <div class="right-card">
+          <div class="icon">⏸️</div>
+          <h4>Restriction</h4>
+          <p>Request restriction of processing while a correction or objection request is assessed (GDPR).</p>
+        </div>
+        <div class="right-card">
+          <div class="icon">🤖</div>
+          <h4>Automated Decisions</h4>
+          <p>Request human review of any significant decision made about you solely by automated means.</p>
+        </div>
+      </div>
+
+      <h3>How to Exercise Your Rights</h3>
+      <p>
+        Submit your request to <a href="mailto:sgalphatok@gmail.com">sgalphatok@gmail.com</a> with the subject line <strong>"Privacy Request — [Right Type]"</strong>. Please include your account email so we can verify your identity. We will respond within:
+      </p>
+      <ul>
+        <li><strong>PDPA (Singapore):</strong> 10 business days to acknowledge; 30 calendar days to fulfil (or advise of extensions).</li>
+        <li><strong>GDPR (EU/UK):</strong> One calendar month, with a possible two-month extension for complex requests.</li>
+      </ul>
+
+      <h3>Complaints</h3>
+      <p>
+        If you are not satisfied with our response, you have the right to lodge a complaint with the <strong>Singapore Personal Data Protection Commission (PDPC)</strong> at <a href="https://www.pdpc.gov.sg" target="_blank" rel="noopener">www.pdpc.gov.sg</a>. EU/UK users may also contact their local supervisory authority.
+      </p>
+    </section>
+
+    <!-- ── 19. Marketing opt-out ───────────────────────────────── -->
+    <section id="marketing-opt-out">
+      <h2><span class="section-num">19</span>Marketing Communications &amp; Opt-Out</h2>
+      <p>
+        We may send you product news, feature updates, tips, and promotional offers by email. We will only do so where you have consented or where we have a legitimate interest in reaching you as an existing customer about similar products and services.
+      </p>
+      <p>You can opt out of marketing emails at any time by:</p>
+      <ul>
+        <li>Clicking the <strong>Unsubscribe</strong> link in any marketing email; or</li>
+        <li>Emailing <a href="mailto:sgalphatok@gmail.com">sgalphatok@gmail.com</a> with the subject "Unsubscribe".</li>
+      </ul>
+      <p>
+        Opting out of marketing does <strong>not</strong> affect transactional communications (receipts, security alerts, critical service notices), which we must send to maintain your account.
+      </p>
+    </section>
+
+    <!-- ── 20. Children ────────────────────────────────────────── -->
+    <section id="children">
+      <h2><span class="section-num">20</span>Children's Privacy</h2>
+      <p>
+        Globiz is not directed at or intended for use by individuals under the age of 18. We do not knowingly collect personal data from children. If we become aware that we have inadvertently collected personal data from a person under 18, we will delete it promptly.
+      </p>
+      <p>
+        If you believe we may have collected data from a child, please contact us at <a href="mailto:sgalphatok@gmail.com">sgalphatok@gmail.com</a>.
+      </p>
+    </section>
+
+    <!-- ── 21. Cookies ─────────────────────────────────────────── -->
+    <section id="cookies">
+      <h2><span class="section-num">21</span>Cookies &amp; Tracking Technologies</h2>
+
+      <h3>Desktop Application</h3>
+      <p>
+        The Globiz desktop application does not use browser cookies. Electron-based application state and session data are managed via local storage on your device (<code>~/.globizwork/</code>).
+      </p>
+
+      <h3>Marketing Website</h3>
+      <p>Our marketing website may use the following types of cookies:</p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Cookie Type</th><th>Purpose</th><th>Duration</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Strictly Necessary</strong></td>
+            <td>Core website functionality, security, session management</td>
+            <td>Session</td>
+          </tr>
+          <tr>
+            <td><strong>Analytics</strong></td>
+            <td>Aggregate traffic measurement to understand website usage</td>
+            <td>Up to 24 months</td>
+          </tr>
+          <tr>
+            <td><strong>Functional</strong></td>
+            <td>Remembering preferences (language, theme)</td>
+            <td>12 months</td>
+          </tr>
+          <tr>
+            <td><strong>Marketing</strong></td>
+            <td>Measuring campaign effectiveness (only with consent)</td>
+            <td>Up to 12 months</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>You can manage cookie preferences via the cookie banner on our website or through your browser settings. Disabling cookies may affect certain website functionality.</p>
+    </section>
+
+    <!-- ── 22. Changes ─────────────────────────────────────────── -->
+    <section id="changes">
+      <h2><span class="section-num">22</span>Changes to This Privacy Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time to reflect changes in our data practices, new legal requirements, or new features. When we make material changes, we will:
+      </p>
+      <ul>
+        <li>Update the "Last Updated" date at the top of this page;</li>
+        <li>Display a prominent notice in the Globiz application; and</li>
+        <li>Send an email notification to the address associated with your account at least <strong>14 days</strong> before the changes take effect.</li>
+      </ul>
+      <p>
+        Your continued use of the Service after the effective date of the updated Policy constitutes acceptance of the changes. If you do not agree with any update, you should stop using the Service and may request deletion of your account and data.
+      </p>
+    </section>
+
+    <!-- ── 23. Contact ─────────────────────────────────────────── -->
+    <section id="contact">
+      <h2><span class="section-num">23</span>Contact Us &amp; Data Protection Officer</h2>
+      <p>
+        If you have any questions, concerns, or requests relating to this Privacy Policy or our data practices, please contact us:
+      </p>
+
+      <table class="data-table" style="max-width: 540px;">
+        <tbody>
+          <tr>
+            <td><strong>Entity</strong></td>
+            <td>AlphaTok Singapore Pte. Ltd.</td>
+          </tr>
+          <tr>
+            <td><strong>Product</strong></td>
+            <td>Globiz</td>
+          </tr>
+          <tr>
+            <td><strong>Privacy enquiries</strong></td>
+            <td><a href="mailto:sgalphatok@gmail.com">sgalphatok@gmail.com</a></td>
+          </tr>
+          <tr>
+            <td><strong>Subject line</strong></td>
+            <td>"Privacy Request" or "PDPA Request"</td>
+          </tr>
+          <tr>
+            <td><strong>Jurisdiction</strong></td>
+            <td>Republic of Singapore</td>
+          </tr>
+          <tr>
+            <td><strong>Regulator</strong></td>
+            <td><a href="https://www.pdpc.gov.sg" target="_blank" rel="noopener">Personal Data Protection Commission (PDPC)</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout-info">
+        <strong>Response commitment:</strong> We acknowledge all privacy requests within 3 business days and aim to fully resolve them within 30 calendar days. Complex requests may take up to 60 days; we will inform you if this is the case.
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="doc-footer">
+      <p>&copy; 2026 AlphaTok Technology Pte. Ltd. All rights reserved.</p>
+      <p>This Privacy Policy was last updated on June 11, 2026 (Version 1.0).</p>
+      <p style="margin-top: 10px; font-size: 12px; color: #94a3b8;">
+        This document is for informational purposes only and does not constitute legal advice. Consult a qualified Singapore data protection lawyer to ensure full PDPA compliance before publishing.
+      </p>
+    </footer>
+
+  </main>
+</div>
+</body>
+</html>
